@@ -12,7 +12,7 @@
                             </div>
                         </div>
                         <div class="login-info">
-                            <p>上次登录时间<span>2021-7-5</span></p>
+                            <p>上次登录时间<span>{{nowDate}}</span></p>
                             <p>上次登录地点<span>武汉</span></p>
                         </div>
                     </el-card>
@@ -63,6 +63,7 @@
 
 import { getData } from '@/api/index'
 import * as echarts from 'echarts';
+import {getNowFormatDate} from '@/utils/time.js'
 export default {
     components: {},
     name: 'my-home',
@@ -73,6 +74,11 @@ export default {
             line: [],
             bar: [],
             pie: []
+        }
+    },
+    computed:{
+        nowDate(){
+            return getNowFormatDate()
         }
     },
     methods: {

@@ -6,7 +6,7 @@
           <el-button type="primary" @click="adduser">新增</el-button>
         </div>
         <div class="search">
-          <el-input v-model="search" placeholder="请输入内容">
+          <el-input v-model="search" placeholder="请输入要查找的姓名">
             <template slot="prepend">
               <el-button type="primary" icon="el-icon-search" @click="onSearch"
                 >搜索</el-button

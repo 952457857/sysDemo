@@ -98,7 +98,7 @@ Mock.mock('/api/user/getUserByName', 'post', function (params) {
     //根据用户的名字查找数据 返回一个数组
     let users = [];//用来存储找到的对象
     userList.forEach((item) => {
-        if (item.name == name) {//满足条件放进数组
+        if (item.name.indexOf(name)>=0) {//满足条件放进数组
             users.push(item)
         }
     })
